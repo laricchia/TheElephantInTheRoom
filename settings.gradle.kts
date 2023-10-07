@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "TheElephantInTheRoom"
 include(":app")
+include(":compose:homepage")
