@@ -10,16 +10,17 @@ object AppConfiguration {
     }
 
     object CompileOptions {
-        val sourceCompatibility = JavaVersion.VERSION_1_8
-        val targetCompatibility = JavaVersion.VERSION_1_8
+        val sourceCompatibility = JavaVersion.VERSION_1_9
+        val targetCompatibility = JavaVersion.VERSION_1_9
     }
 
     object KotlinOptions {
-        const val jvmTarget = "1.8"
+        const val jvmTarget = "9"
     }
 
     object ComposeOption {
-        const val kotlinCompilerExtensionVersion = "1.3.2"
+        // https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+        const val kotlinCompilerExtensionVersion = "1.5.4"
     }
 
 }
