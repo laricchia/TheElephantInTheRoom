@@ -1,5 +1,7 @@
 object Versions {
 
+    const val gradleAndroid = "8.1.2"
+
     const val coreKtx = "1.12.0"
     const val LifecycleRuntime = "2.3.1"
     const val ComposeActivity = "1.5.1"
