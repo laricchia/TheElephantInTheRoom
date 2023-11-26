@@ -57,23 +57,9 @@ android {
 }
 
 dependencies {
-
-    implementation (AppDependency.androidXCore)
-    implementation (platform(AppDependency.kotlinBom))
-    implementation (AppDependency.androidXLifecycle)
-    implementation (AppDependency.androidXActivityCompose)
-    implementation (platform(AppDependency.composeBom))
-    implementation (AppDependency.composeUi)
-    implementation (AppDependency.composeUiGraphics)
-    implementation (AppDependency.composeUiToolingPreview)
-    implementation (AppDependency.composeMaterial3)
-    testImplementation (AppDependency.jUnit)
-    androidTestImplementation (AppDependency.jUnitExt)
-    androidTestImplementation (AppDependency.espressoCore)
-    androidTestImplementation (platform(AppDependency.composeBom))
-    androidTestImplementation (AppDependency.composeJUnit)
-    debugImplementation (AppDependency.composeUiTooling)
-    debugImplementation (AppDependency.composeUiTestManifest)
-
-    implementation(project(AppDependency.homepageModule))
+    addCommonLibraries()
+    addCompose(includeTest = false)
+    addTestBase()
+    addAndroidTestBase()
+    addAppModules()
 }
