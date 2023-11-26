@@ -5,10 +5,10 @@ plugins {
 
 android {
     namespace = "com.roblar.homepage"
-    compileSdk = 33
+    compileSdk = AppConfiguration.compileSdk
 
     defaultConfig {
-        minSdk = 29
+        minSdk = AppConfiguration.DefaultConfig.minSdk
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -24,17 +24,18 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = AppConfiguration.CompileOptions.sourceCompatibility
+        targetCompatibility = AppConfiguration.CompileOptions.targetCompatibility
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = AppConfiguration.KotlinOptions.jvmTarget
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion =
+            AppConfiguration.ComposeOption.kotlinCompilerExtensionVersion
     }
 }
 

@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.roblar.theelephantintheroom"
-    compileSdk = 33
+    compileSdk = AppConfiguration.compileSdk
 
     defaultConfig {
         applicationId = "com.roblar.theelephantintheroom"
-        minSdk = 29
-        targetSdk = 33
+        minSdk = AppConfiguration.DefaultConfig.minSdk
+        targetSdk = AppConfiguration.DefaultConfig.targetSdk
         versionCode = 1
         versionName = "1.0"
 
@@ -35,17 +35,18 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = AppConfiguration.CompileOptions.sourceCompatibility
+        targetCompatibility = AppConfiguration.CompileOptions.targetCompatibility
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = AppConfiguration.KotlinOptions.jvmTarget
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion =
+            AppConfiguration.ComposeOption.kotlinCompilerExtensionVersion
     }
     // Deprecated packagingOptions
     packaging {
