@@ -5,7 +5,7 @@ object Versions {
     const val coreKtx = "1.12.0"
     const val LifecycleRuntime = "2.3.1"
     const val ComposeActivity = "1.5.1"
-    const val ComposeBom = "2022.10.00"
+    const val ComposeBom = "2023.10.01"
     // https://developer.android.com/jetpack/androidx/releases/compose-kotlin
     const val KotlinVersion = "1.9.20"
 
