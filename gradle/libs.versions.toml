@@ -1,0 +1,50 @@
+[versions]
+gradleAndroid = "8.1.2"
+
+coreKtx = "1.12.0"
+lifecycleRuntime = "2.3.1"
+composeActivity = "1.5.1"
+composeBom = "2023.10.01"
+
+# https://developer.android.com/jetpack/androidx/releases/compose-kotlin
+kotlinVersion = "1.9.20"
+
+jUnitVersion = "4.13.2"
+jUnitExt = "1.1.5"
+espressoCore = "3.5.1"
+
+[libraries]
+
+androidXCore = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+androidXLifecycle = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntime" }
+androidXActivityCompose = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
+
+composeUi = { module = "androidx.compose.ui:ui" }
+composeUiGraphics = { module = "androidx.compose.ui:ui-graphics" }
+composeUiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview" }
+composeMaterial3 = { module = "androidx.compose.material3:material3" }
+
+# Bom - use with platform
+composeBom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+kotlinBom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlinVersion" }
+
+
+# Test implementation
+jUnit = { module = "junit:junit", version.ref = "jUnitVersion" }
+
+# Android test implementation
+jUnitExt = { module = "androidx.test.ext:junit", version.ref = "jUnitExt" }
+espressoCore = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+composeJUnit = { module = "androidx.compose.ui:ui-test-junit4" }
+
+# Debug implementation
+composeUiTooling = { module = "androidx.compose.ui:ui-tooling" }
+composeUiTestManifest = { module = "androidx.compose.ui:ui-test-manifest" }
+
+[plugins]
+androidApp = { id = "com.android.application", version.ref = "gradleAndroid" }
+androidLib = { id = "com.android.library", version.ref = "gradleAndroid" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
+
+[bundles]
+

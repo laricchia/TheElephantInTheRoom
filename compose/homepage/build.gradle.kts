@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    alias(catalog.plugins.androidLib)
+    alias(catalog.plugins.kotlin)
 }
 
 android {
@@ -39,9 +39,11 @@ android {
     }
 }
 
-dependencies {
-    addCommonLibraries()
-    addCompose()
-    addTestBase()
-    addAndroidTestBase()
+apply<CatalogPlugin>()
+
+catalogPlugin {
+    addCommon = true
+    addCompose = false
+    addTestBase = true
+    addAndroidTestBase = true
 }

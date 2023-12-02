@@ -11,6 +11,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    versionCatalogs {
+        create("catalog") {
+            from(files("./gradle/libs.versions.toml"))
+        }
+    }
 }
 rootProject.name = "TheElephantInTheRoom"
 include(":app")
